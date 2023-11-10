@@ -1,0 +1,36 @@
+.card {
+    width: 340px;
+    height: 340px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    background: $primary-color
+        linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(0, 0, 0, 0.5) 100%
+        );
+    border-radius: 10px;
+    justify-self: center;
+    :hover {
+        cursor: pointer;
+    }
+    &__title {
+        position: absolute;
+        color: white;
+        margin: 0 20px 20px 20px;
+        height: 52px;
+        font-size: 18px;
+        font-weight: $font-medium;
+    }
+    img {
+        border-radius: 10px;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+/*** Media queries for card ***/
+/*@include responsive-card;*/

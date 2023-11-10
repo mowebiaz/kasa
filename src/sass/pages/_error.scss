@@ -1,0 +1,28 @@
+.error.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 139px;
+    padding-top: 139px;
+    padding-bottom: 139px;
+
+    h1 {
+        font-size: 288px;
+        font-weight: $font-bold;
+        line-height: 96px;
+    }
+    h2 {
+        font-size: 36px;
+        font-weight: $font-medium;
+        text-align: center;
+    }
+    p {
+        font-size: 18px;
+        font-weight: $font-medium;
+        text-decoration-line: underline;
+        cursor: pointer;
+    }
+}
+
+/*** Media queries for error page ***/
+@include responsive-error;

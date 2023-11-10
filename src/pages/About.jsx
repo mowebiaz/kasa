@@ -1,3 +1,9 @@
+import { Banner } from '../components/Banner'
+
 export function About() {
-    return <h1>About us</h1>
+    return (
+        <div className="about container">
+            <Banner />
+        </div>
+    )
 }
