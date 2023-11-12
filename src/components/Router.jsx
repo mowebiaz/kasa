@@ -10,17 +10,19 @@ import { Header } from './Header'
 export function Router() {
     return (
         <BrowserRouter>
-            <Header />
-            <Routes>
-                <Route path="/" element={<Home />}></Route>
-                <Route path="/about" element={<About />}></Route>
-                <Route
-                    path="/apartment/:apartmentId"
-                    element={<Apartment />}
-                ></Route>
-                <Route path="*" element={<Error />}></Route>
-            </Routes>
-            <Footer />
+            <main>
+                <Header />
+                <Routes>
+                    <Route path="/" element={<Home />}></Route>
+                    <Route path="/about" element={<About />}></Route>
+                    <Route
+                        path="/apartment/:apartmentId"
+                        element={<Apartment />}
+                    ></Route>
+                    <Route path="*" element={<Error />}></Route>
+                </Routes>
+                <Footer />
+            </main>
         </BrowserRouter>
     )
 }

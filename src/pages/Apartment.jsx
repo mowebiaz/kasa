@@ -18,12 +18,16 @@ export function Apartment() {
         async function fetchApartmentDetails() {
             setLoading(true)
             try {
-                const response = await fetch('../data/logements.json')
+                const response = await fetch('/data/logements.json')
                 const result = await response.json()
                 const apartmentMatch = result.find(
                     (object) => object.id === apartmentId
                 )
-                setApartmentDetails(apartmentMatch)
+                if (apartmentMatch) {
+                    setApartmentDetails(apartmentMatch)
+                } else {
+                    setError(true)
+                }
             } catch (err) {
                 console.log('===error===', err)
                 setError(true)
@@ -35,7 +39,7 @@ export function Apartment() {
     }, [apartmentId])
 
     if (error) {
-        return <p>Impossible de charger le détail de l'appartements</p>
+        return <Error />
     }
 
     return (

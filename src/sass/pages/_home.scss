@@ -2,7 +2,20 @@
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
 .home.container {
-    padding: 50px 100px;
+    padding: 0 20px 27px 20px;
+    .gallery {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(
+            auto-fit,
+            minmax(355px, 1fr)
+        ); /*revoir le min */
+        row-gap: 20px;
+
+        p {
+            font-size: $font-size-small;
+        }
+        /*padding: 50px 100px;
     gap: 43px;
     .gallery {
         background-color: $background-color;
@@ -12,7 +25,8 @@
         row-gap: 50px;
         column-gap: 60px;
         padding-top: 56px;
+    }*/
     }
 }
 
-@include responsive-home;
+/*@include responsive-home; */

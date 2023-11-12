@@ -10,6 +10,7 @@ export function Card({ apartment }) {
                 navigate(`apartment/${apartment.id}`)
             }}
         >
+            <div className="card__overlay"></div>
             <img src={apartment.cover} alt="cover" />
             <div className="card__title">{apartment.title}</div>
         </div>
