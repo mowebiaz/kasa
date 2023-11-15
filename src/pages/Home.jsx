@@ -6,7 +6,7 @@ import homeBannerImage from '../assets/images/homebanner.png'
 export function Home() {
     const [apartmentsList, setApartmentsList] = useState([])
     const [isLoading, setLoading] =
-        useState(true) /* mettre false pa défaut ? */
+        useState(true) /* mettre false par défaut ? */
     const [error, setError] = useState(false)
 
     useEffect(() => {

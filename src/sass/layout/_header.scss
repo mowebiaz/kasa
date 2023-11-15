@@ -3,24 +3,26 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 68px;
-    padding: 0 100px;
-    margin-top: 45px;
-    svg {
-        fill: $primary-color;
-        width: 210px;
-        height: 68px;
-    }
+    padding: 0 20px;
+    margin-top: 20px;
     nav {
         display: flex;
+        justify-content: flex-end;
         align-items: flex-start;
-        gap: 57px;
-        font-size: 24px;
-        font-weight: $font-medium;
-
+        flex-grow: 1;
+        gap: 26px;
+        a {
+            font-size: $font-size-small;
+            font-weight: $font-medium;
+        }
         .active {
             text-decoration: underline;
         }
+    }
+    svg {
+        fill: $primary-color;
+        width: 145px;
+        height: 47px;
     }
 }
 

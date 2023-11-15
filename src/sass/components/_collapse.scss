@@ -1,0 +1,84 @@
+.collapse {
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 20px;
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 5px;
+        background-color: $primary-color;
+        color: $font-color-variant;
+        height: 30px;
+
+        &__title {
+            text-indent: 10px;
+            font-size: 13px;
+            font-weight: $font-medium;
+        }
+
+        &__arrow {
+            cursor: pointer;
+            fill: white;
+            width: 32px;
+            height: 32px;
+        }
+    }
+
+    &__container {
+        background-color: $background-color;
+        /*padding: 13px 20px 19px 20px;*/
+    }
+}
+
+/***** animation *****/
+
+.up {
+    transition: transform 1s;
+}
+
+.down {
+    transform: rotate(-180deg);
+    /*transform-origin: 50% 50%;*/
+    transition: transform 1s;
+}
+
+.collapse__container {
+    max-height: 0;
+    overflow: hidden;
+    /*transition: max-height 2s ease-in-out;*/
+}
+
+.collapse__container.show {
+    animation: collapseanimation;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    /*max-height: 100vh;*/
+}
+
+/*@keyframes:  duration | timing-function | delay | iteration-count | direction | fill-mode | play-state | name
+animation: 3s ease-in 1s 2 reverse both paused slidein;*/
+
+@keyframes collapseanimation {
+    from {
+        max-height: 0px;
+        display: none;
+        visibility: hidden;
+    }
+    to {
+        max-height: 100vh;
+    }
+}
+
+@keyframes collapseanimationreverse {
+    from {
+        max-height: 100vh;
+    }
+    to {
+        max-height: 0px;
+    }
+}
+
+/*** Media queries for collapse ***/

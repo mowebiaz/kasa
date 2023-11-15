@@ -1,0 +1,11 @@
+.about.container {
+    padding: 19px;
+    width: 100%;
+    .content {
+        margin-top: 19px;
+        width: 100%;
+    }
+}
+
+/*** Media queries for about page ***/
+@include responsive-about;

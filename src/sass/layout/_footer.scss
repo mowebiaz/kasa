@@ -14,16 +14,17 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    gap: 0px;
-    padding-bottom: 29px;
+    padding-top: 8px;
     width: 133px;
     p {
         height: 46px;
         color: $font-color-variant;
         font-weight: $font-medium;
         font-size: $font-size-small;
-        text-align: center;
         line-height: normal;
+        display: inline-flex;
+        align-items: flex-end;
+        text-align: center;
     }
     svg {
         fill: #fff;

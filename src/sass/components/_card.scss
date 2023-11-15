@@ -37,10 +37,10 @@
         width: 100%;
         padding: 15px 20px;
         color: white;
-        font-size: 18px;
+        font-size: $font-size-medium;
         font-weight: $font-medium;
     }
 }
 
 /*** Media queries for card ***/
-/*@include responsive-card;*/
+@include responsive-card;

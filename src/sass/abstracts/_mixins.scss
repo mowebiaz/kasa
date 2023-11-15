@@ -4,16 +4,19 @@
 
 /// Responsive versions of header
 @mixin responsive-header {
-    @media screen and (max-width: $small) {
+    @media screen and (min-width: $medium) {
         header {
-            padding: 0 20px;
+            padding: 0 100px;
+            margin-top: 45px;
             nav {
-                gap: 26px;
-                font-size: 12px;
+                gap: 57px;
+                a {
+                    font-size: $font-size-large;
+                }
             }
             svg {
-                width: 145px;
-                height: 47px;
+                width: 210px;
+                height: 68px;
             }
         }
     }
@@ -46,12 +49,17 @@
 /// Responsive versions of footer
 @mixin responsive-footer {
     @media screen and (min-width: $medium) {
+        footer {
+            justify-content: end;
+            padding-bottom: 29px;
+        }
         .footer__content {
             gap: 28px;
             width: 100%;
-            width: 100%;
+            padding-top: 0;
             p {
-                font-size: 24px;
+                font-size: $font-size-large;
+                line-height: unset;
             }
         }
     }
@@ -59,36 +67,43 @@
 
 /***** Response version of home page *****/
 
+@mixin responsive-home {
+    @media screen and (min-width: $medium) {
+        .home.container {
+            padding: 50px 100px;
+            gap: 43px;
+            .gallery {
+                background-color: $background-color;
+                border-radius: 25px;
+                row-gap: 50px;
+                column-gap: 60px;
+                padding: 56px 50px 43px 50px;
+            }
+        }
+    }
+}
+
 /// responsive version of card
 @mixin responsive-card {
-    @media screen and (min-width: $small) {
-        /*height: 340px;*/
-    }
-}
-
-/// responsive version of gallery
-@mixin responsive-home {
-    @media screen and (min-width: $small) {
-    }
-}
-
-/*.home.container {
-    padding: 50px 100px;
-    gap: 43px;
-    .gallery {
-        background-color: $background-color;
-        border-radius: 25px;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-        row-gap: 50px;
-        column-gap: 60px;
-        padding-top: 56px;
+    @media screen and (min-width: $medium) {
+        .card {
+            height: 340px;
+            width: 340px;
+            img {
+                height: 340px;
+                width: 340px;
+            }
+            &__title {
+                padding: 20px;
+            }
+        }
     }
 }
 
 /***** Response version of error page *****/
 @mixin responsive-error {
     @media screen and (max-width: $small) {
+        /* à refaire */
         .error.container {
             gap: 113px;
             padding-top: 113px;
@@ -98,11 +113,40 @@
             }
             h2 {
                 width: 260px;
-                font-size: 18px;
+                font-size: $font-size-medium;
             }
             p {
                 font-size: 14px;
             }
         }
+    }
+}
+
+/***** Response version of about page *****/
+@mixin responsive-about {
+    @media screen and (min-width: $small) {
+        .about.container {
+            .content {
+                margin-top: 38px;
+            }
+        }
+    }
+
+    @media screen and (min-width: $medium) {
+        .about.container {
+            padding: 38px 100px;
+            .content {
+                width: 82.5%;
+                margin-top: 38px;
+            }
+        }
+    }
+}
+
+@mixin responsive-collapse {
+    @media screen and (min-width: $small) {
+    }
+
+    @media screen and (min-width: $medium) {
     }
 }

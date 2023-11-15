@@ -1,11 +1,11 @@
 import { useParams } from 'react-router-dom'
 import { Error } from './Error'
 import { useEffect, useState } from 'react'
+import { Slider } from '../components/slider'
 
 /**
  * Renders the details of an apartment based on the provided ID.
  *
- * @return {JSX.Element} The JSX element containing the apartment details.
  */
 export function Apartment() {
     const { apartmentId } = useParams()
@@ -24,9 +24,11 @@ export function Apartment() {
                     (object) => object.id === apartmentId
                 )
                 if (apartmentMatch) {
+                    /* à revoir */
                     setApartmentDetails(apartmentMatch)
                 } else {
                     setError(true)
+                    /*return <Error />*/
                 }
             } catch (err) {
                 console.log('===error===', err)
@@ -48,12 +50,11 @@ export function Apartment() {
                 <p>Chargement en cours</p>
             ) : (
                 <>
+                    <Slider apartmentPictures={apartmentDetails.pictures} />
                     <p>
                         l'ID de l'appartement est {apartmentDetails.id} et son
-                        titre est {apartmentDetails.title} et son image de
-                        couverture est
+                        titre est {apartmentDetails.title}
                     </p>
-                    <img src={apartmentDetails.cover} alt="cover" />
                 </>
             )}
         </div>
