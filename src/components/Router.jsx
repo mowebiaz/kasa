@@ -2,10 +2,10 @@ import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { About } from '../pages/About'
 import { Apartment } from '../pages/Apartment'
-import { Error } from '../pages/Error'
 import { Home } from '../pages/Home'
 import { Footer } from './Footer'
 import { Header } from './Header'
+import { ErrorComponent } from './ErrorComponent'
 
 export function Router() {
     return (
@@ -19,7 +19,7 @@ export function Router() {
                         path="/apartment/:apartmentId"
                         element={<Apartment />}
                     ></Route>
-                    <Route path="*" element={<Error />}></Route>
+                    <Route path="*" element={<ErrorComponent />}></Route>
                 </Routes>
                 <Footer />
             </main>

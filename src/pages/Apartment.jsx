@@ -1,9 +1,9 @@
-import { useNavigate, useParams } from 'react-router-dom'
-import { Error } from './Error'
+import { useParams } from 'react-router-dom'
 import { Slider } from '../components/Slider'
 import { Collapse } from '../components/Collapse'
 import { Rate } from '../components/Rate'
 import { FetchApartmentsList } from '../utils/FetchApartmentsList'
+import { ErrorComponent } from '../components/ErrorComponent'
 
 /**
  * Renders the details of an apartment based on the provided ID.
@@ -11,12 +11,10 @@ import { FetchApartmentsList } from '../utils/FetchApartmentsList'
  */
 export function Apartment() {
     const { apartmentId } = useParams()
-    const navigate = useNavigate()
-
     const { isLoading, apartmentsList, error } = FetchApartmentsList()
 
     if (error) {
-        return <p>impossible de charger</p>
+        return <p>Impossible de charger la liste des appartements</p>
     }
 
     const apartmentDetails = apartmentsList.find(
@@ -24,7 +22,7 @@ export function Apartment() {
     )
 
     if (!apartmentDetails) {
-        return <Error />
+        return <ErrorComponent />
     }
 
     return (
