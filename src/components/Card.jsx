@@ -1,5 +1,10 @@
 import { useNavigate } from 'react-router-dom'
 
+/**
+ * Renders a card component for a given apartment.
+ *
+ * @param {Object} apartment - The apartment object containing details.
+ */
 export function Card({ apartment }) {
     const navigate = useNavigate()
 

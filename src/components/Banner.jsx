@@ -4,7 +4,6 @@
  * @param {string} bannerTitle - The title of the banner.
  * @param {string} image - The URL of the image to be displayed.
  * @param {string} alt - The alt text for the image.
- * @return {JSX.Element} The rendered banner component.
  */
 export function Banner({ bannerTitle, image, alt }) {
     return (

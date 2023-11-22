@@ -60,7 +60,15 @@ export function Apartment() {
                         />
                         <Collapse
                             title="Equipements"
-                            content={apartmentDetails.equipments}
+                            content={apartmentDetails.equipments.map(
+                                (equipement, index) => (
+                                    <ul>
+                                        <li key={`${index}-${equipement}`}>
+                                            {equipement}
+                                        </li>
+                                    </ul>
+                                )
+                            )}
                         />
                     </div>
                 </article>

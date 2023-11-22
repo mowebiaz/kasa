@@ -1,4 +1,13 @@
 import { useEffect, useState } from 'react'
+
+/**
+ * Fetches the list of apartments from the server.
+ *
+ * @return {Object} An object containing the following properties:
+ *   - isLoading: A boolean indicating if the data is currently being loaded.
+ *   - apartmentsList: An array of apartments.
+ *   - error: A boolean indicating if an error occurred during the fetching process.
+ */
 export function FetchApartmentsList() {
     const [apartmentsList, setApartmentsList] = useState([])
     const [isLoading, setLoading] = useState(true)

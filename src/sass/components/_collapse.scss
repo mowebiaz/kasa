@@ -1,11 +1,9 @@
 .collapse {
     width: 100%;
     border-radius: 5px;
-    margin-top: 20px;
-    margin: 20px auto;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    margin-top: 20px;
 
     &__header {
         display: flex;
@@ -25,64 +23,35 @@
         &__arrow {
             cursor: pointer;
             fill: white;
-            width: 32px;
-            height: 32px;
+            background-color: none;
+            /*width: 32px;
+            height: 30px;*/
+            transform-origin: center;
+            transition: transform 0.3s ease-in-out;
+            &.up {
+                transform: rotate(0deg);
+            }
+
+            &.down {
+                transform: rotate(-180deg);
+            }
         }
     }
 
     &__container {
         background-color: $background-color;
-        /*padding: 13px 20px 19px 20px;*/
-        flex: 1 0 20%;
+        overflow: hidden;
+        transition: max-height 2000ms ease-in-out;
+
+        &.hide {
+            max-height: 0;
+        }
+        &.show {
+            max-height: 100vh;
+        }
     }
-}
-
-/***** animation *****/
-
-.up {
-    transition: transform 1s;
-}
-
-.down {
-    transform: rotate(-180deg);
-    /*transform-origin: 50% 50%;*/
-    transition: transform 1s;
-}
-
-.collapse__container {
-    max-height: 0;
-    overflow: hidden;
-    /*transition: max-height 2s ease-in-out;*/
-}
-
-.collapse__container.show {
-    animation: collapseanimation;
-    animation-duration: 2s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
-    /*max-height: 100vh;*/
-}
-
-/*@keyframes:  duration | timing-function | delay | iteration-count | direction | fill-mode | play-state | name
-animation: 3s ease-in 1s 2 reverse both paused slidein;*/
-
-@keyframes collapseanimation {
-    from {
-        max-height: 0px;
-        display: none;
-        visibility: hidden;
-    }
-    to {
-        max-height: 200px;
-    }
-}
-
-@keyframes collapseanimationreverse {
-    from {
-        max-height: 100vh;
-    }
-    to {
-        max-height: 0px;
+    &__content {
+        padding: 13px 20px 19px 20px;
     }
 }
 
