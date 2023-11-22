@@ -1,0 +1,52 @@
+.apartment.container {
+    padding: 27px 20px;
+    article {
+        width: 100%;
+    }
+}
+
+.top {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+.topone {
+    h1 {
+        font-size: $font-medium;
+        font-weight: $font-medium;
+    }
+    h2 {
+        font-size: 14px;
+        font-weight: $font-medium;
+    }
+}
+
+.toptwo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__host {
+        display: flex;
+        align-items: center;
+        height: 33px;
+        gap: 10.5px;
+        p {
+            width: 93px;
+            text-align: end;
+            font-size: $font-size-small;
+            font-weight: $font-medium;
+        }
+        &__picture {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            img {
+                object-fit: cover;
+                border-radius: 50%;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+/*** Media queries for apartment page ***/

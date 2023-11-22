@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { ReactComponent as ArrowNext } from '../assets/icons/buttonnext.svg'
 
 export function Slider({ apartmentPictures }) {
     const [indexImage, setIndexImage] = useState(0)
@@ -34,21 +35,27 @@ export function Slider({ apartmentPictures }) {
     }
 
     return (
-        <div className="slider">
-            <div className="slider__picture">
-                <img src={apartmentPictures[indexImage]} alt="" />
+        <div
+            className="slider"
+            style={{
+                backgroundImage: `url(${apartmentPictures[indexImage]})`,
+            }}
+        >
+            <div className="slider__button">
+                <button
+                    className="slider__button__previous"
+                    onClick={handleClickPrevious}
+                >
+                    Previous
+                </button>
+                <button
+                    className="slider__button__next"
+                    onClick={handleClickNext}
+                >
+                    {<ArrowNext />}
+                </button>
             </div>
-            <button
-                className="slider__previousbutton"
-                onClick={handleClickPrevious}
-            >
-                Previous
-            </button>
-            <button className="slider__nextbutton" onClick={handleClickNext}>
-                Next
-            </button>
-
-            <div className="slider__numerotation">
+            <div className="slider__pages">
                 <p>{`${indexImage + 1}/${apartmentPictures.length}`}</p>
             </div>
         </div>

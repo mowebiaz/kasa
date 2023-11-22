@@ -13,10 +13,11 @@
 @import 'layout/header', 'layout/footer';
 
 // 5. Components
-@import 'components/banner', 'components/card', 'components/collapse';
+@import 'components/banner', 'components/card', 'components/collapse',
+    'components/rate', 'components/slider';
 
 // 6. Page-specific styles
-@import 'pages/home', 'pages/error', 'pages/about';
+@import 'pages/about', 'pages/apartment', 'pages/error', 'pages/home';
 
 // 7. Themes
 @import 'themes/default';

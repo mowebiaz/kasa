@@ -1,0 +1,19 @@
+.toptwo__rate {
+    height: 18px;
+    width: 98px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.star {
+    &__active svg {
+        fill: $primary-color;
+        height: 18px;
+        width: 18px;
+    }
+    &__inactive svg {
+        fill: #e3e3e3;
+        height: 18px;
+        width: 18px;
+    }
+}

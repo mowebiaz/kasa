@@ -1,7 +1,9 @@
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { Error } from './Error'
 import { useEffect, useState } from 'react'
-import { Slider } from '../components/slider'
+import { Slider } from '../components/Slider'
+import { Collapse } from '../components/Collapse'
+import { Rate } from '../components/Rate'
 
 /**
  * Renders the details of an apartment based on the provided ID.
@@ -9,6 +11,7 @@ import { Slider } from '../components/slider'
  */
 export function Apartment() {
     const { apartmentId } = useParams()
+    const navigate = useNavigate()
 
     const [apartmentDetails, setApartmentDetails] = useState([])
     const [isLoading, setLoading] = useState(true)
@@ -28,7 +31,6 @@ export function Apartment() {
                     setApartmentDetails(apartmentMatch)
                 } else {
                     setError(true)
-                    /*return <Error />*/
                 }
             } catch (err) {
                 console.log('===error===', err)
@@ -45,17 +47,44 @@ export function Apartment() {
     }
 
     return (
-        <div>
+        <div className="apartment container">
             {isLoading ? (
                 <p>Chargement en cours</p>
             ) : (
-                <>
+                <article>
                     <Slider apartmentPictures={apartmentDetails.pictures} />
-                    <p>
-                        l'ID de l'appartement est {apartmentDetails.id} et son
-                        titre est {apartmentDetails.title}
-                    </p>
-                </>
+                    <div className="top">
+                        <div className="topone">
+                            <div className="topone__titles">
+                                <h1>{apartmentDetails.title}</h1>
+                                <h2>{apartmentDetails.location}</h2>
+                            </div>
+                            <div className="topone__tags">tags</div>
+                        </div>
+                        <div className="toptwo">
+                            <Rate value={apartmentDetails.rating} />
+                            <div className="toptwo__host">
+                                <p>{apartmentDetails.host.name}</p>
+                                <div className="toptwo__host__picture">
+                                    <img
+                                        src={apartmentDetails.host.picture}
+                                        alt=""
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="bottom">
+                        <Collapse
+                            title="Description"
+                            content={apartmentDetails.description}
+                        />
+                        <Collapse
+                            title="Equipements"
+                            content={apartmentDetails.equipments}
+                        />
+                    </div>
+                </article>
             )}
         </div>
     )

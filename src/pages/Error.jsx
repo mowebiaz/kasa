@@ -1,7 +1,10 @@
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useRouteError } from 'react-router-dom'
 import React from 'react'
 
 export function Error() {
+    /*     const error = useRouteError()
+    console.error(error) */
+
     const navigate = useNavigate()
     return (
         <div className="error container">
