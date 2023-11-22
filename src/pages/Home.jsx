@@ -1,35 +1,10 @@
 import { Banner } from '../components/Banner'
 import { Card } from '../components/Card'
-import { useEffect, useState } from 'react'
 import homeBannerImage from '../assets/images/homebanner.png'
+import { FetchApartmentsList } from '../utils/FetchApartmentsList'
 
 export function Home() {
-    const [apartmentsList, setApartmentsList] = useState([])
-    const [isLoading, setLoading] =
-        useState(true) /* mettre false par défaut ? */
-    const [error, setError] = useState(false)
-
-    useEffect(() => {
-        async function fetchApartments() {
-            setLoading(true)
-            try {
-                const response = await fetch('/data/logements.json', {
-                    headers: {
-                        'Content-Type': 'application/json',
-                        Accept: 'application/json',
-                    },
-                })
-                const result = await response.json()
-                setApartmentsList(result)
-            } catch (err) {
-                console.log('===error===', err)
-                setError(true)
-            } finally {
-                setLoading(false)
-            }
-        }
-        fetchApartments()
-    }, [])
+    const { isLoading, apartmentsList, error } = FetchApartmentsList()
 
     if (error) {
         return <p>Impossible de charger la liste des appartements</p>
