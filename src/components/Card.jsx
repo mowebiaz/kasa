@@ -12,7 +12,7 @@ export function Card({ apartment }) {
         <div
             className="card"
             onClick={() => {
-                navigate(`apartment/${apartment.id}`)
+                navigate(`/apartment/${apartment.id}`)
             }}
         >
             <div className="card__overlay"></div>
