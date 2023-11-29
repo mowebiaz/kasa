@@ -1,10 +1,11 @@
 import { useParams } from 'react-router-dom'
+import { useEffect } from 'react'
+import { FetchApartmentsList } from '../utils/FetchApartmentsList'
 import { Slider } from '../components/Slider'
 import { Collapse } from '../components/Collapse'
 import { Rate } from '../components/Rate'
-import { FetchApartmentsList } from '../utils/FetchApartmentsList'
-import { ErrorComponent } from '../components/ErrorComponent'
 import { Tags } from '../components/Tags'
+import { ErrorComponent } from '../components/ErrorComponent'
 
 /**
  * Renders the details of an apartment based on the provided ID.
@@ -13,6 +14,11 @@ import { Tags } from '../components/Tags'
 export function Apartment() {
     const { apartmentId } = useParams()
     const { isLoading, apartmentsList, error } = FetchApartmentsList()
+
+    /* à revoir, via react-router ? */
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
 
     if (error) {
         return <p>Impossible de charger la liste des appartements</p>

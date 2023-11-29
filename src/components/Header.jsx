@@ -6,7 +6,7 @@ export function Header() {
         <header>
             <Logo />
             <nav>
-                <NavLink to="/">Accueil</NavLink>
+                <NavLink to="/home">Accueil</NavLink>
                 <NavLink to="/about">A Propos</NavLink>
             </nav>
         </header>
