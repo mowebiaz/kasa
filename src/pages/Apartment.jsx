@@ -4,6 +4,7 @@ import { Collapse } from '../components/Collapse'
 import { Rate } from '../components/Rate'
 import { FetchApartmentsList } from '../utils/FetchApartmentsList'
 import { ErrorComponent } from '../components/ErrorComponent'
+import { Tags } from '../components/Tags'
 
 /**
  * Renders the details of an apartment based on the provided ID.
@@ -38,7 +39,9 @@ export function Apartment() {
                                 <h1>{apartmentDetails.title}</h1>
                                 <h2>{apartmentDetails.location}</h2>
                             </div>
-                            <div className="topone__tags">tags</div>
+                            <div className="topone__tags">
+                                <Tags tagList={apartmentDetails.tags} />
+                            </div>
                         </div>
                         <div className="toptwo">
                             <Rate value={apartmentDetails.rating} />
@@ -47,7 +50,7 @@ export function Apartment() {
                                 <div className="toptwo__host__picture">
                                     <img
                                         src={apartmentDetails.host.picture}
-                                        alt=""
+                                        alt={apartmentDetails.host.name}
                                     />
                                 </div>
                             </div>
@@ -60,15 +63,7 @@ export function Apartment() {
                         />
                         <Collapse
                             title="Equipements"
-                            content={apartmentDetails.equipments.map(
-                                (equipement, index) => (
-                                    <ul>
-                                        <li key={`${index}-${equipement}`}>
-                                            {equipement}
-                                        </li>
-                                    </ul>
-                                )
-                            )}
+                            content={apartmentDetails.equipments}
                         />
                     </div>
                 </article>

@@ -12,7 +12,7 @@ export function Rate({ value }) {
         const starClass = i <= value ? 'star__active' : 'star__inactive'
         stars.push(
             <span key={i} className={starClass}>
-                {<Star />}
+                <Star />
             </span>
         )
     }

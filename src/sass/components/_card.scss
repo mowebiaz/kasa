@@ -1,5 +1,7 @@
 .card {
-    width: 335px; /* à revoir */
+    /*width: 335px; /* à revoir */
+    width: 100%;
+    max-width: 335px;
     height: 255px; /* à revoir */
     position: relative;
     border-radius: 10px;
@@ -7,6 +9,7 @@
 
     :hover {
         cursor: pointer;
+        opacity: 0.2; /* à revoir */
     }
 
     &__overlay {
@@ -26,7 +29,8 @@
     img {
         border-radius: 10px;
         height: 255px; /* à revoir */
-        width: 335px; /* à revoir */
+        /*width: 335px; /* à revoir */
+        width: 100%;
         object-fit: cover;
     }
 

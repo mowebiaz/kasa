@@ -30,9 +30,9 @@ export function About() {
         <div className="about container">
             <Banner image={aboutBannerImage} alt="Photo de montagnes" />
             <section className="content">
-                {aboutData.map((item, idx /* à revoir */) => (
+                {aboutData.map((item, index) => (
                     <Collapse
-                        key={`${item.title}-${item.idx}`}
+                        key={index}
                         title={item.title}
                         content={item.content}
                     />

@@ -1,6 +1,12 @@
 import { useState } from 'react'
 import { ReactComponent as ArrowNext } from '../assets/icons/buttonnext.svg'
+import { ReactComponent as ArrowPrevious } from '../assets/icons/buttonprevious.svg'
 
+/**
+ * Renders a slider component with apartment pictures.
+ *
+ * @param {Object} apartmentPictures - An array of apartment pictures.
+ */
 export function Slider({ apartmentPictures }) {
     const [indexImage, setIndexImage] = useState(0)
 
@@ -12,6 +18,7 @@ export function Slider({ apartmentPictures }) {
             setIndexImage(0)
         }
     }
+
     const handleClickPrevious = () => {
         if (indexImage > 0) {
             setIndexImage(indexImage - 1)
@@ -21,17 +28,19 @@ export function Slider({ apartmentPictures }) {
         }
     }
 
-    if (apartmentPictures.length === 1) {
-        return (
-            <div className="slider">
-                <div className="slider__picture">
-                    <img src={apartmentPictures[indexImage]} alt="" />
-                </div>
-            </div>
-        )
-    }
     if (apartmentPictures.length === 0 || !apartmentPictures) {
         return <p>Il n'y a pas d'image pour cet appartement</p>
+    }
+
+    if (apartmentPictures.length === 1) {
+        return (
+            <div
+                className="slider"
+                style={{
+                    backgroundImage: `url(${apartmentPictures[0]})`,
+                }}
+            ></div>
+        )
     }
 
     return (
@@ -46,7 +55,7 @@ export function Slider({ apartmentPictures }) {
                     className="slider__button__previous"
                     onClick={handleClickPrevious}
                 >
-                    Previous
+                    <ArrowPrevious />
                 </button>
                 <button
                     className="slider__button__next"

@@ -16,7 +16,7 @@ export function Card({ apartment }) {
             }}
         >
             <div className="card__overlay"></div>
-            <img src={apartment.cover} alt="cover" />
+            <img src={apartment.cover} alt={apartment.title} />
             <div className="card__title">{apartment.title}</div>
         </div>
     )

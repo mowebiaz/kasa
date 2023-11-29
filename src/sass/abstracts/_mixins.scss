@@ -2,6 +2,8 @@
 // This file contains all application-wide Sass mixins.
 // -----------------------------------------------------------------------------
 
+/***** Responsive versions of components *****/
+
 /// Responsive versions of header
 @mixin responsive-header {
     @media screen and (min-width: $medium) {
@@ -24,7 +26,6 @@
 
 /// Responsive versions of banner
 @mixin responsive-banner {
-    /// for medium screen
     @media screen and (min-width: $medium) {
         .banner {
             height: 223px;
@@ -65,6 +66,59 @@
     }
 }
 
+/// Responsive version of card
+@mixin responsive-card {
+    @media screen and (min-width: $medium) {
+        .card {
+            height: 340px;
+            max-width: 340px;
+            img {
+                height: 340px;
+            }
+            &__title {
+                padding: 20px;
+            }
+        }
+    }
+}
+
+/// Responsive version of collapse
+@mixin responsive-collapse {
+    @media screen and (min-width: $small) {
+    }
+
+    @media screen and (min-width: $medium) {
+    }
+}
+
+/// Responsive version of slider
+@mixin responsive-slider {
+    @media screen and (min-width: $medium) {
+        .slider {
+            border-radius: 25px;
+            &__pages {
+                display: block;
+            }
+            &__button {
+                padding: 0 23px;
+                &__next svg,
+                &__previous svg {
+                    width: 47px;
+                    height: 79px;
+                }
+            }
+        }
+    }
+    @media screen and (min-width: $large) {
+        .slider {
+            height: 415px;
+            border-radius: 25px;
+        }
+    }
+}
+
+/// Responsive versions of tags
+
 /***** Response version of home page *****/
 
 @mixin responsive-home {
@@ -78,23 +132,6 @@
                 row-gap: 50px;
                 column-gap: 60px;
                 padding: 56px 50px 43px 50px;
-            }
-        }
-    }
-}
-
-/// responsive version of card
-@mixin responsive-card {
-    @media screen and (min-width: $medium) {
-        .card {
-            height: 340px;
-            width: 340px;
-            img {
-                height: 340px;
-                width: 340px;
-            }
-            &__title {
-                padding: 20px;
             }
         }
     }
@@ -143,10 +180,11 @@
     }
 }
 
-@mixin responsive-collapse {
-    @media screen and (min-width: $small) {
-    }
-
+/***** Response version of apartment page *****/
+@mixin responsive-apartment {
     @media screen and (min-width: $medium) {
+        .apartment.container {
+            padding: 50px 100px;
+        }
     }
 }
