@@ -14,7 +14,7 @@ export function Collapse({ title, content }) {
     const [isOpen, setIsOpen] = useState(false)
 
     const arrowClass = isOpen ? 'down' : 'up'
-    const containerClass = isOpen ? 'show' : 'hide'
+    const containerClass = isOpen ? 'show' : ''
 
     const handleClick = () => {
         setIsOpen((v) => !v)

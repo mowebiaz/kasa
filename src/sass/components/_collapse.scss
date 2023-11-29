@@ -43,20 +43,21 @@
     }
 
     &__container {
+        display: grid;
+        grid-template-rows: 0fr;
         background-color: $background-color;
-        overflow: hidden;
+        transition: grid-template-rows 300ms ease-in-out;
 
-        &.hide {
-            max-height: 0;
-            transition: max-height 300ms ease-in-out;
-        }
         &.show {
-            max-height: 100vh;
-            transition: max-height 300ms ease-in-out;
+            grid-template-rows: 1fr;
         }
     }
     &__content {
-        padding: 13px 20px 19px 20px;
+        overflow: hidden;
+        p,
+        ul {
+            padding: 13px 20px 19px 20px;
+        }
         ul {
             list-style-type: none;
         }
