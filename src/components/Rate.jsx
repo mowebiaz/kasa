@@ -17,5 +17,5 @@ export function Rate({ value }) {
         )
     }
 
-    return <div className="toptwo__rate">{stars}</div>
+    return <div className="rate">{stars}</div>
 }

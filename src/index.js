@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './sass/main.scss'
-import { Router } from '../src/components/Router'
+import { Router } from './router'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(

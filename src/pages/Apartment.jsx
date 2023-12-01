@@ -5,7 +5,7 @@ import { Slider } from '../components/Slider'
 import { Collapse } from '../components/Collapse'
 import { Rate } from '../components/Rate'
 import { Tags } from '../components/Tags'
-import { ErrorComponent } from '../components/ErrorComponent'
+import { ErrorPage } from './ErrorPage'
 
 /**
  * Renders the details of an apartment based on the provided ID.
@@ -29,7 +29,7 @@ export function Apartment() {
     )
 
     if (!apartmentDetails) {
-        return <ErrorComponent />
+        return <ErrorPage />
     }
 
     return (
