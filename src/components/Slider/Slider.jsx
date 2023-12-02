@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import { ReactComponent as ArrowNext } from '../assets/icons/buttonnext.svg'
-import { ReactComponent as ArrowPrevious } from '../assets/icons/buttonprevious.svg'
+import { ReactComponent as ArrowNext } from '../../assets/icons/buttonnext.svg'
+import { ReactComponent as ArrowPrevious } from '../../assets/icons/buttonprevious.svg'
 
 /**
  * Renders a slider component with apartment pictures.

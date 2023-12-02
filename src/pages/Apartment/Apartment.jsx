@@ -1,11 +1,11 @@
 import { useParams } from 'react-router-dom'
 import { useEffect } from 'react'
-import { FetchApartmentsList } from '../utils/FetchApartmentsList'
-import { Slider } from '../components/Slider'
-import { Collapse } from '../components/Collapse'
-import { Rate } from '../components/Rate'
-import { Tags } from '../components/Tags'
-import { ErrorPage } from './ErrorPage'
+import { FetchApartmentsList } from '../../utils/FetchApartmentsList'
+import { Slider } from '../../components/Slider/Slider'
+import { Collapse } from '../../components/Collapse/Collapse'
+import { Rate } from '../../components/Rate/Rate'
+import { Tags } from '../../components/Tags/Tags'
+import { ErrorPage } from '../ErrorPage/ErrorPage'
 
 /**
  * Renders the details of an apartment based on the provided ID.

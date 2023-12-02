@@ -47,4 +47,15 @@
 }
 
 /*** Media queries for card ***/
-@include responsive-card;
+@media screen and (min-width: $medium) {
+    .card {
+        height: 340px;
+        max-width: 340px;
+        img {
+            height: 340px;
+        }
+        &__title {
+            padding: 20px;
+        }
+    }
+}

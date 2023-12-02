@@ -1,7 +1,7 @@
-import { Banner } from '../components/Banner'
-import { Card } from '../components/Card'
-import homeBannerImage from '../assets/images/homebanner.png'
-import { FetchApartmentsList } from '../utils/FetchApartmentsList'
+import { Banner } from '../../components/Banner/Banner'
+import { Card } from '../../components/Card/Card'
+import homeBannerImage from '../../assets/images/homebanner.png'
+import { FetchApartmentsList } from '../../utils/FetchApartmentsList'
 
 export function Home() {
     const { isLoading, apartmentsList, error } = FetchApartmentsList()

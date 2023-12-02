@@ -34,4 +34,22 @@
 }
 
 /*** Media queries for banner ***/
-@include responsive-banner;
+@media screen and (min-width: $medium) {
+    .banner {
+        height: 223px;
+        margin-bottom: 43px;
+        border-radius: 25px;
+        &__overlay {
+            border-radius: 25px;
+        }
+        &__image {
+            border-radius: 25px;
+        }
+        &__title {
+            width: 100%;
+            text-align: center;
+            margin: auto;
+            font-size: 48px;
+        }
+    }
+}

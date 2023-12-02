@@ -62,4 +62,20 @@
 }
 
 /*** Media queries for apartment page ***/
-@include responsive-apartment;
+@media screen and (min-width: $medium) {
+    .apartment.container {
+        padding: 50px 100px; /* à revoir */
+    }
+}
+@media screen and (min-width: $large) {
+    .top {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .toptwo {
+        flex-direction: column-reverse;
+    }
+    .bottom {
+        flex-direction: row;
+    }
+}

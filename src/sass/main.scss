@@ -1,23 +1,19 @@
 @charset "UTF-8";
 
-// 1. Configuration and helpers
-@import 'abstracts/variables', 'abstracts/functions', 'abstracts/mixins';
+// Configuration and helpers
+@import 'abstracts/variables', 'abstracts/mixins';
 
-// 2. Vendors
-@import 'vendors/normalize';
+// Base stuff
+@import 'base/base', 'base/normalize', 'base/typography';
 
-// 3. Base stuff
-@import 'base/base', 'base/fonts', 'base/typography';
+// Layout-related sections
+@import './../components/Footer/footer', './../components/Header/header';
 
-// 4. Layout-related sections
-@import 'layout/header', 'layout/footer';
+// Components
+@import './../components/Banner/banner', './../components/Card/card',
+    './../components/Collapse/collapse', './../components/Rate/rate',
+    './../components/Slider/slider', './../components/Tags/tags';
 
-// 5. Components
-@import 'components/banner', 'components/card', 'components/collapse',
-    'components/rate', 'components/slider', 'components/tags';
-
-// 6. Page-specific styles
-@import 'pages/about', 'pages/apartment', 'pages/error', 'pages/home';
-
-// 7. Themes
-@import 'themes/default';
+// Page-specific styles
+@import './../pages/About/about', './../pages/Apartment/apartment',
+    './../pages/ErrorPage/error', './../pages/Home/home';

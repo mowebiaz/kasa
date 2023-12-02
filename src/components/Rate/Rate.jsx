@@ -1,4 +1,4 @@
-import { ReactComponent as Star } from '../assets/icons/star.svg'
+import { ReactComponent as Star } from '../../assets/icons/star.svg'
 
 /**
  * Generates a star rating component based on the given value.

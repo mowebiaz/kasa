@@ -34,4 +34,25 @@
 }
 
 /*** Media queries for slider ***/
-@include responsive-slider;
+@media screen and (min-width: $medium) {
+    .slider {
+        border-radius: 25px;
+        &__pages {
+            display: block;
+        }
+        &__button {
+            padding: 0 23px;
+            &__next svg,
+            &__previous svg {
+                width: 47px;
+                height: 79px;
+            }
+        }
+    }
+}
+@media screen and (min-width: $large) {
+    .slider {
+        height: 415px;
+        border-radius: 25px;
+    }
+}

@@ -27,4 +27,19 @@ header {
 }
 
 /*** Media queries for header ***/
-@include responsive-header;
+@media screen and (min-width: $medium) {
+    header {
+        padding: 0 100px;
+        margin-top: 45px;
+        nav {
+            gap: 57px;
+            a {
+                font-size: $font-size-large;
+            }
+        }
+        svg {
+            width: 210px;
+            height: 68px;
+        }
+    }
+}

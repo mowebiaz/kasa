@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { ReactComponent as Arrow } from '../assets/icons/arrowup.svg'
+import { ReactComponent as Arrow } from '../../assets/icons/arrowup.svg'
 
 /**
  * Renders a collapsible component with a header and a container.

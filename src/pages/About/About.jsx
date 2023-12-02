@@ -1,6 +1,6 @@
-import { Banner } from '../components/Banner'
-import aboutBannerImage from '../assets/images/aboutbanner.png'
-import { Collapse } from '../components/Collapse'
+import { Banner } from '../../components/Banner/Banner'
+import aboutBannerImage from '../../assets/images/aboutbanner.png'
+import { Collapse } from '../../components/Collapse/Collapse'
 
 export const aboutData = [
     {

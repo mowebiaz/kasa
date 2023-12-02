@@ -19,4 +19,17 @@
     }
 }
 
-@include responsive-home;
+/*** Media queries for home page ***/
+@media screen and (min-width: $medium) {
+    .home.container {
+        padding: 50px 100px;
+        gap: 43px;
+        .gallery {
+            background-color: $background-color;
+            border-radius: 25px;
+            row-gap: 50px;
+            column-gap: 60px;
+            padding: 56px 50px 43px 50px;
+        }
+    }
+}
