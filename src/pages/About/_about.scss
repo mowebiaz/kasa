@@ -11,20 +11,20 @@
 }
 
 /*** Media queries for about page ***/
-@media screen and (min-width: $small) {
+@media screen and (min-width: $medium) {
     .about.container {
         .content {
             margin-top: 38px;
+            width: 80%;
         }
     }
 }
 
-@media screen and (min-width: $medium) {
+@media screen and (min-width: $large) {
     .about.container {
         padding: 38px 100px;
         .content {
-            width: 82.5%; /* à revoir */
-            margin-top: 38px;
+            width: 82.5%;
         }
     }
 }

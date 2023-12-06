@@ -1,8 +1,7 @@
 .card {
-    /*width: 335px; /* à revoir */
     width: 100%;
     max-width: 335px;
-    height: 255px; /* à revoir */
+    height: 255px;
     position: relative;
     border-radius: 10px;
     justify-self: center;
@@ -28,8 +27,7 @@
 
     img {
         border-radius: 10px;
-        height: 255px; /* à revoir */
-        /*width: 335px; /* à revoir */
+        height: 255px;
         width: 100%;
         object-fit: cover;
     }
@@ -47,7 +45,7 @@
 }
 
 /*** Media queries for card ***/
-@media screen and (min-width: $medium) {
+@media screen and (min-width: $large) {
     .card {
         height: 340px;
         max-width: 340px;

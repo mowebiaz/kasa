@@ -12,6 +12,7 @@
             minmax(280px, 1fr)
         ); /*revoir le min et le max */
         row-gap: 20px;
+        column-gap: 5px;
 
         p {
             font-size: $font-size-small;
@@ -21,12 +22,18 @@
 
 /*** Media queries for home page ***/
 @media screen and (min-width: $medium) {
+    .gallery {
+        background-color: $background-color;
+        border-radius: 25px;
+        padding: 20px;
+    }
+}
+
+@media screen and (min-width: $large) {
     .home.container {
         padding: 50px 100px;
         gap: 43px;
         .gallery {
-            background-color: $background-color;
-            border-radius: 25px;
             row-gap: 50px;
             column-gap: 60px;
             padding: 56px 50px 43px 50px;

@@ -17,3 +17,22 @@
         width: 18px;
     }
 }
+
+/*** Media queries for tags ***/
+@media screen and (min-width: $medium) {
+    .rate {
+        height: 36px;
+        width: 196px;
+        align-items: center;
+    }
+    .star {
+        &__active svg {
+            height: 24px;
+            width: 24px;
+        }
+        &__inactive svg {
+            height: 24px;
+            width: 24px;
+        }
+    }
+}

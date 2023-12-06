@@ -45,9 +45,7 @@ export function Apartment() {
                                 <h1>{apartmentDetails.title}</h1>
                                 <h2>{apartmentDetails.location}</h2>
                             </div>
-                            <div className="topone__tags">
-                                <Tags tagList={apartmentDetails.tags} />
-                            </div>
+                            <Tags tagList={apartmentDetails.tags} />
                         </div>
                         <div className="toptwo">
                             <Rate value={apartmentDetails.rating} />

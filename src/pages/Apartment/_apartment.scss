@@ -16,12 +16,14 @@
     &__titles {
         margin-bottom: 10px;
         h1 {
-            font-size: $font-medium;
+            font-size: $font-size-medium;
             font-weight: $font-medium;
+            line-height: 142.6%;
         }
         h2 {
             font-size: 14px;
             font-weight: $font-medium;
+            line-height: 142.6%;
         }
     }
 }
@@ -33,7 +35,6 @@
     &__host {
         display: flex;
         align-items: center;
-        height: 33px;
         gap: 10.5px;
         p {
             width: 93px;
@@ -63,19 +64,44 @@
 
 /*** Media queries for apartment page ***/
 @media screen and (min-width: $medium) {
-    .apartment.container {
-        padding: 50px 100px; /* à revoir */
-    }
-}
-@media screen and (min-width: $large) {
     .top {
         flex-direction: row;
         justify-content: space-between;
+        margin-top: 30px;
+        margin-bottom: 24px;
+    }
+    .topone {
+        &__titles {
+            h1 {
+                font-size: 36px;
+            }
+            h2 {
+                font-size: $font-size-medium;
+                font-weight: $font-medium;
+            }
+        }
     }
     .toptwo {
         flex-direction: column-reverse;
+        &__host {
+            width: 100%;
+            justify-content: flex-end;
+            p {
+                font-size: $font-size-medium;
+            }
+            &__picture {
+                width: 64px;
+                height: 64px;
+            }
+        }
     }
     .bottom {
         flex-direction: row;
+    }
+}
+
+@media screen and (min-width: $large) {
+    .apartment.container {
+        padding: 50px 100px;
     }
 }

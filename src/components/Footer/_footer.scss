@@ -34,7 +34,7 @@ footer {
 }
 
 /*** Media queries for footer ***/
-@media screen and (min-width: $medium) {
+@media screen and (min-width: $large) {
     footer {
         justify-content: end;
         padding-bottom: 29px;

@@ -1,23 +1,21 @@
 .error.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 139px;
-    padding-top: 139px;
-    padding-bottom: 139px;
+    /*gap: 139px;*/
+    /*padding-top: 139px;
+    padding-bottom: 139px;*/
 
     h1 {
-        font-size: 288px;
+        /*height: 99px;*/
+        font-size: 96px;
         font-weight: $font-bold;
         line-height: 96px;
     }
     h2 {
-        font-size: 36px;
+        font-size: $font-size-medium;
         font-weight: $font-medium;
         text-align: center;
     }
-    p {
-        font-size: 18px;
+    a {
+        font-size: 14px;
         font-weight: $font-medium;
         text-decoration-line: underline;
         cursor: pointer;
@@ -25,3 +23,16 @@
 }
 
 /*** Media queries for error page ***/
+@media screen and (min-width: $large) {
+    .error.container {
+        h1 {
+            font-size: 288px;
+        }
+        h2 {
+            font-size: 36px;
+        }
+        a {
+            font-size: $font-size-medium;
+        }
+    }
+}
