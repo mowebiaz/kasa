@@ -2,11 +2,15 @@
 // This file contains very basic styles.
 // -----------------------------------------------------------------------------
 
+#root {
+    /*height: 100vh; /*for footer position */
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
 main {
     display: flex;
     flex-direction: column;
-    /*align-items: center;*/
-    /*min-height: 100vh; /* for footer position  */
     width: 100%;
     max-width: $max-width;
 }

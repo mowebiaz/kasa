@@ -1,9 +1,10 @@
 import { ReactComponent as Star } from '../../assets/icons/star.svg'
 
 /**
- * Generates a star rating component based on the given value.
+ * Renders a rating component based on the provided value.
  *
- * @param {object} value - The value used to determine the number of active stars.
+ * @param {Object} props - The properties object.
+ * @param {number} props.value - The rating value.
  */
 export function Rate({ value }) {
     const stars = []

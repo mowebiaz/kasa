@@ -11,36 +11,23 @@ export function Slider({ apartmentPictures }) {
     const [indexImage, setIndexImage] = useState(0)
 
     const handleClickNext = () => {
-        if (indexImage < apartmentPictures.length) {
-            setIndexImage(indexImage + 1)
-        }
         if (indexImage === apartmentPictures.length - 1) {
             setIndexImage(0)
+        } else {
+            setIndexImage(indexImage + 1)
         }
     }
 
     const handleClickPrevious = () => {
-        if (indexImage > 0) {
-            setIndexImage(indexImage - 1)
-        }
         if (indexImage === 0) {
             setIndexImage(apartmentPictures.length - 1)
+        } else {
+            setIndexImage(indexImage - 1)
         }
     }
 
     if (apartmentPictures.length === 0 || !apartmentPictures) {
         return <p>Il n'y a pas d'image pour cet appartement</p>
-    }
-
-    if (apartmentPictures.length === 1) {
-        return (
-            <div
-                className="slider"
-                style={{
-                    backgroundImage: `url(${apartmentPictures[0]})`,
-                }}
-            ></div>
-        )
     }
 
     return (
@@ -50,23 +37,28 @@ export function Slider({ apartmentPictures }) {
                 backgroundImage: `url(${apartmentPictures[indexImage]})`,
             }}
         >
-            <div className="slider__button">
-                <button
-                    className="slider__button__previous"
-                    onClick={handleClickPrevious}
-                >
-                    <ArrowPrevious />
-                </button>
-                <button
-                    className="slider__button__next"
-                    onClick={handleClickNext}
-                >
-                    {<ArrowNext />}
-                </button>
-            </div>
-            <div className="slider__pages">
-                <p>{`${indexImage + 1}/${apartmentPictures.length}`}</p>
-            </div>
+            {apartmentPictures.length > 1 && (
+                /*Add buttons and page numbers if there is more than one image*/
+                <>
+                    <div className="slider__button">
+                        <button
+                            className="slider__button__previous"
+                            onClick={handleClickPrevious}
+                        >
+                            <ArrowPrevious />
+                        </button>
+                        <button
+                            className="slider__button__next"
+                            onClick={handleClickNext}
+                        >
+                            {<ArrowNext />}
+                        </button>
+                    </div>
+                    <div className="slider__pages">
+                        <p>{`${indexImage + 1}/${apartmentPictures.length}`}</p>
+                    </div>
+                </>
+            )}
         </div>
     )
 }

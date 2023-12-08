@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom'
+import { redirect, useNavigate, useParams } from 'react-router-dom'
 import { useEffect } from 'react'
 import { FetchApartmentsList } from '../../utils/FetchApartmentsList'
 import { Slider } from '../../components/Slider/Slider'
@@ -12,17 +12,22 @@ import { ErrorPage } from '../ErrorPage/ErrorPage'
  *
  */
 export function Apartment() {
-    const { apartmentId } = useParams()
-    const { isLoading, apartmentsList, error } = FetchApartmentsList()
-
-    /* à revoir, via react-router ? */
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [])
 
+    const { apartmentId } = useParams()
+    const { isLoading, apartmentsList, error } = FetchApartmentsList()
+
     if (error) {
         return <p>Impossible de charger la liste des appartements</p>
     }
+
+    /*if (apartmentsList.map((object) => object.id).includes(apartmentId)) {
+        return <p>trouvé</p>
+    } else {
+        return <ErrorPage />
+    }*/
 
     const apartmentDetails = apartmentsList.find(
         (object) => object.id === apartmentId
@@ -30,6 +35,7 @@ export function Apartment() {
 
     if (!apartmentDetails) {
         return <ErrorPage />
+        /*const navigate = useNavigate('/*')*/
     }
 
     return (
