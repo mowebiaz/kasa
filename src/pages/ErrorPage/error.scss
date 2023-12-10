@@ -1,4 +1,4 @@
-@import '../../styles/variables', '../../styles/base', '../../styles/normalize';
+@use '../../styles/variables.scss';
 
 main.error {
   gap: 113px;
@@ -7,26 +7,26 @@ main.error {
 
   h1 {
     font-size: 96px;
-    font-weight: $font-bold;
+    font-weight: variables.$font-bold;
     line-height: 96px;
   }
   h2 {
-    font-size: $font-size-medium;
-    font-weight: $font-medium;
+    font-size: variables.$font-size-medium;
+    font-weight: variables.$font-medium;
     text-align: center;
     width: 260px;
     line-height: 142.6%;
   }
   a {
     font-size: 14px;
-    font-weight: $font-medium;
+    font-weight: variables.$font-medium;
     text-decoration-line: underline;
     cursor: pointer;
   }
 }
 
 /*** Media queries for error page ***/
-@media screen and (min-width: $medium) {
+@media screen and (min-width: variables.$medium) {
   main.error {
     h1 {
       font-size: 150px;
@@ -38,12 +38,12 @@ main.error {
       margin: 0 100px;
     }
     a {
-      font-size: $font-size-medium;
+      font-size: variables.$font-size-medium;
     }
   }
 }
 
-@media screen and (min-width: $large) {
+@media screen and (min-width: variables.$large) {
   main.error {
     gap: 139px;
     padding-top: 139px;

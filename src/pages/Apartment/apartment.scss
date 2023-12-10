@@ -1,4 +1,4 @@
-@import '../../styles/variables', '../../styles/base', '../../styles/normalize';
+@use '../../styles/variables.scss';
 
 main.apartment {
   padding: 27px 20px;
@@ -18,13 +18,13 @@ main.apartment {
   &__titles {
     margin-bottom: 10px;
     h1 {
-      font-size: $font-size-medium;
-      font-weight: $font-medium;
+      font-size: variables.$font-size-medium;
+      font-weight: variables.$font-medium;
       line-height: 142.6%;
     }
     h2 {
       font-size: 14px;
-      font-weight: $font-medium;
+      font-weight: variables.$font-medium;
       line-height: 142.6%;
     }
   }
@@ -41,8 +41,8 @@ main.apartment {
     p {
       width: 93px;
       text-align: end;
-      font-size: $font-size-small;
-      font-weight: $font-medium;
+      font-size: variables.$font-size-small;
+      font-weight: variables.$font-medium;
     }
     &__picture {
       width: 32px;
@@ -65,7 +65,7 @@ main.apartment {
 }
 
 /*** Media queries for apartment page ***/
-@media screen and (min-width: $medium) {
+@media screen and (min-width: variables.$medium) {
   .top {
     flex-direction: row;
     justify-content: space-between;
@@ -78,8 +78,8 @@ main.apartment {
         font-size: 36px;
       }
       h2 {
-        font-size: $font-size-medium;
-        font-weight: $font-medium;
+        font-size: variables.$font-size-medium;
+        font-weight: variables.$font-medium;
       }
     }
   }
@@ -89,7 +89,7 @@ main.apartment {
       width: 100%;
       justify-content: flex-end;
       p {
-        font-size: $font-size-medium;
+        font-size: variables.$font-size-medium;
       }
       &__picture {
         width: 64px;
@@ -102,7 +102,7 @@ main.apartment {
   }
 }
 
-@media screen and (min-width: $large) {
+@media screen and (min-width: variables.$large) {
   main.apartment {
     padding: 50px 100px;
   }

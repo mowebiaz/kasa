@@ -1,5 +1,4 @@
-/*@import '../../styles/global';*/
-@use '../../styles/global';
+@use '../../styles/variables.scss';
 
 .banner {
   width: 100%;
@@ -29,15 +28,15 @@
     top: 50%;
     left: 0;
     transform: translateY(-50%);
-    color: global.$font-color-variant;
+    color: variables.$font-color-variant;
     font-size: 24px;
-    font-weight: global.$font-medium;
+    font-weight: variables.$font-medium;
     line-height: 100%;
   }
 }
 
 /*** Media queries for banner ***/
-@media screen and (min-width: global.$medium) {
+@media screen and (min-width: variables.$medium) {
   .banner {
     height: 223px;
     border-radius: 25px;

@@ -1,4 +1,4 @@
-@import '../../styles/variables', '../../styles/base', '../../styles/normalize';
+@use '../../styles/variables.scss';
 
 main.about {
   padding: 19px;
@@ -13,7 +13,7 @@ main.about {
 }
 
 /*** Media queries for about page ***/
-@media screen and (min-width: $medium) {
+@media screen and (min-width: variables.$medium) {
   main.about {
     .content {
       margin-top: 38px;
@@ -22,7 +22,7 @@ main.about {
   }
 }
 
-@media screen and (min-width: $large) {
+@media screen and (min-width: variables.$large) {
   main.about {
     padding: 38px 100px;
     .content {

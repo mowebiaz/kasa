@@ -1,4 +1,4 @@
-@import '../../styles/variables', '../../styles/base', '../../styles/normalize';
+@use '../../styles/variables.scss';
 
 main.home {
   padding: 27px 20px;
@@ -6,38 +6,37 @@ main.home {
   .gallery {
     width: 100%;
     display: grid;
-    /*grid-template-columns: repeat(
-            auto-fit,
-            minmax(280px, 1fr)
-        );*/
-    grid-template-columns: 1fr;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    /*grid-template-columns: 1fr;*/
     row-gap: 20px;
     column-gap: 5px;
 
     p {
-      font-size: $font-size-small;
+      font-size: variables.$font-size-small;
     }
   }
 }
 
 /*** Media queries for home page ***/
-@media screen and (min-width: $medium) {
+@media screen and (min-width: variables.$medium) {
   main.home {
     .gallery {
-      grid-template-columns: repeat(2, 1fr);
-      background-color: $background-color;
+      /*grid-template-columns: repeat(2, 1fr);*/
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      background-color: variables.$background-color;
       border-radius: 25px;
       padding: 20px;
     }
   }
 }
 
-@media screen and (min-width: $large) {
+@media screen and (min-width: variables.$large) {
   main.home {
     padding: 50px 100px;
     gap: 43px;
     .gallery {
-      grid-template-columns: repeat(2, 1fr);
+      /*grid-template-columns: repeat(2, 1fr);*/
       row-gap: 50px;
       column-gap: 60px;
       padding: 56px 50px 43px 50px;

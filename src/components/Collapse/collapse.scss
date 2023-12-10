@@ -1,4 +1,4 @@
-@import '../../styles/variables', '../../styles/base', '../../styles/normalize';
+@use '../../styles/variables.scss';
 
 .collapse {
   width: 100%;
@@ -10,14 +10,14 @@
     align-items: center;
     justify-content: space-between;
     border-radius: 5px;
-    background-color: $primary-color;
-    color: $font-color-variant;
+    background-color: variables.$primary-color;
+    color: variables.$font-color-variant;
     height: 30px;
     padding: 10px 6px 10px 10px;
 
     &__title {
       font-size: 13px;
-      font-weight: $font-medium;
+      font-weight: variables.$font-medium;
     }
 
     &__arrow {
@@ -45,7 +45,7 @@
   &__container {
     display: grid;
     grid-template-rows: 0fr;
-    background-color: $background-color;
+    background-color: variables.$background-color;
     border-radius: 0px 0px 5px 5px;
     transition: grid-template-rows 300ms ease-in-out;
 
@@ -58,7 +58,7 @@
     p,
     ul {
       padding: 13px 20px 19px 20px;
-      font-size: $font-size-small;
+      font-size: variables.$font-size-small;
       line-height: 142.6%;
     }
     ul {
@@ -68,14 +68,14 @@
 }
 
 /*** Media queries for collapse ***/
-@media screen and (min-width: $medium) {
+@media screen and (min-width: variables.$medium) {
   .collapse {
     &__header {
       height: auto;
       border-radius: 10px;
       padding: 10px 20px 10px 10px;
       &__title {
-        font-size: $font-size-medium;
+        font-size: variables.$font-size-medium;
       }
     }
     &__container {
@@ -84,17 +84,17 @@
     &__content p,
     ul {
       padding: 25px 28px 20px 20px;
-      font-size: $font-size-medium;
+      font-size: variables.$font-size-medium;
     }
   }
 }
 
-@media screen and (min-width: $large) {
+@media screen and (min-width: variables.$large) {
   .collapse {
     &__header {
       padding: 10px 15px 10px 15px;
       &__title {
-        font-size: $font-size-large;
+        font-size: variables.$font-size-large;
       }
     }
     &__container {

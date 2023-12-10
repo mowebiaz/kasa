@@ -22,7 +22,6 @@ export function Home() {
         const result = await response.json()
         setApartmentsList(result)
       } catch (err) {
-        console.log('===error===', err)
         setError(true)
       } finally {
         setLoading(false)

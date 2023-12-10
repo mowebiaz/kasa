@@ -1,4 +1,4 @@
-@import '../../styles/variables', '../../styles/base', '../../styles/normalize';
+@use '../../styles/variables.scss';
 
 .rate {
   height: 18px;
@@ -9,7 +9,7 @@
 
 .star {
   &__active svg {
-    fill: $primary-color;
+    fill: variables.$primary-color;
     height: 18px;
     width: 18px;
   }
@@ -21,7 +21,7 @@
 }
 
 /*** Media queries for tags ***/
-@media screen and (min-width: $medium) {
+@media screen and (min-width: variables.$medium) {
   .rate {
     height: 36px;
     width: 196px;

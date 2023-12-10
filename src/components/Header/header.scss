@@ -1,4 +1,4 @@
-@import '../../styles/variables', '../../styles/base', '../../styles/normalize';
+@use '../../styles/variables.scss';
 
 header {
   width: 100%;
@@ -13,28 +13,28 @@ header {
     flex-grow: 1;
     gap: 26px;
     a {
-      font-size: $font-size-small;
-      font-weight: $font-medium;
+      font-size: variables.$font-size-small;
+      font-weight: variables.$font-medium;
     }
     .active {
       text-decoration: underline;
     }
   }
   svg {
-    fill: $primary-color;
+    fill: variables.$primary-color;
     width: 145px;
     height: 47px;
   }
 }
 
 /*** Media queries for header ***/
-@media screen and (min-width: $medium) {
+@media screen and (min-width: variables.$medium) {
   header nav a {
-    font-size: $font-size-large;
+    font-size: variables.$font-size-large;
   }
 }
 
-@media screen and (min-width: $large) {
+@media screen and (min-width: variables.$large) {
   header {
     padding: 45px 100px 0 100px;
     nav {

@@ -1,4 +1,4 @@
-@import '../../styles/variables', '../../styles/base', '../../styles/normalize';
+@use '../../styles/variables.scss';
 
 footer {
   /*margin-top: auto;*/
@@ -20,9 +20,9 @@ footer {
   width: 133px;
   p {
     height: 46px;
-    color: $font-color-variant;
-    font-weight: $font-medium;
-    font-size: $font-size-small;
+    color: variables.$font-color-variant;
+    font-weight: variables.$font-medium;
+    font-size: variables.$font-size-small;
     line-height: normal;
     display: inline-flex;
     align-items: flex-end;
@@ -36,7 +36,7 @@ footer {
 }
 
 /*** Media queries for footer ***/
-@media screen and (min-width: $large) {
+@media screen and (min-width: variables.$large) {
   footer {
     justify-content: end;
     padding-bottom: 29px;
@@ -46,7 +46,7 @@ footer {
     width: 100%;
     padding-top: 0;
     p {
-      font-size: $font-size-large;
+      font-size: variables.$font-size-large;
       line-height: unset;
     }
   }

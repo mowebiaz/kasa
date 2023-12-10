@@ -50,7 +50,7 @@ export function Apartment() {
   }, [apartmentId])
 
   if (error) {
-    return <Navigate to="/*" />
+    return <Navigate to="/404" />
   }
 
   return (

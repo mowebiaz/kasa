@@ -1,4 +1,4 @@
-@import '../../styles/variables', '../../styles/base', '../../styles/normalize';
+@use '../../styles/variables.scss';
 
 .slider {
   width: 100%;
@@ -18,9 +18,9 @@
     bottom: 25px;
     left: 50%;
     transform: translateX(-50%);
-    color: $font-color-variant;
-    font-weight: $font-medium;
-    font-size: $font-size-medium;
+    color: variables.$font-color-variant;
+    font-weight: variables.$font-medium;
+    font-size: variables.$font-size-medium;
   }
   &__button {
     width: 100%;
@@ -36,7 +36,7 @@
 }
 
 /*** Media queries for slider ***/
-@media screen and (min-width: $medium) {
+@media screen and (min-width: variables.$medium) {
   .slider {
     border-radius: 25px;
     &__pages {
@@ -52,7 +52,7 @@
     }
   }
 }
-@media screen and (min-width: $large) {
+@media screen and (min-width: variables.$large) {
   .slider {
     height: 415px;
     border-radius: 25px;
