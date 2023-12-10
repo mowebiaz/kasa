@@ -8,21 +8,16 @@ import { Home } from './pages/Home/Home'
 import { ErrorPage } from './pages/ErrorPage/ErrorPage'
 
 export function Router() {
-    return (
-        <BrowserRouter>
-            <Header />
-            <main>
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/about" element={<About />} />
-                    <Route
-                        path="/apartment/:apartmentId"
-                        element={<Apartment />}
-                    />
-                    <Route path="*" element={<ErrorPage />} />
-                </Routes>
-            </main>
-            <Footer />
-        </BrowserRouter>
-    )
+  return (
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/apartment/:apartmentId" element={<Apartment />} />
+        <Route path="*" element={<ErrorPage />} />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
+  )
 }

@@ -1,0 +1,28 @@
+@import '../../styles/variables', '../../styles/base', '../../styles/normalize';
+
+.tags {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  &__item {
+    min-width: 84px;
+    padding: 0 5px;
+    text-align: center;
+    background-color: $primary-color;
+    color: $font-color-variant;
+    border-radius: 5px;
+    font-size: 10px;
+    font-weight: $font-medium;
+  }
+}
+
+/*** Media queries for tags ***/
+@media screen and (min-width: $medium) {
+  .tags__item {
+    border-radius: 10px;
+    min-width: 115px;
+    font-size: 14px;
+    height: 25px;
+  }
+}

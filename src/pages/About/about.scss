@@ -1,0 +1,32 @@
+@import '../../styles/variables', '../../styles/base', '../../styles/normalize';
+
+main.about {
+  padding: 19px;
+  width: 100%;
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 19px;
+    width: 100%;
+  }
+}
+
+/*** Media queries for about page ***/
+@media screen and (min-width: $medium) {
+  main.about {
+    .content {
+      margin-top: 38px;
+      width: 80%;
+    }
+  }
+}
+
+@media screen and (min-width: $large) {
+  main.about {
+    padding: 38px 100px;
+    .content {
+      width: 82.5%;
+    }
+  }
+}

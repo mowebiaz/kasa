@@ -1,3 +1,4 @@
+import './collapse.scss'
 import { useState } from 'react'
 import { ReactComponent as Arrow } from '../../assets/icons/arrowup.svg'
 
@@ -11,39 +12,39 @@ import { ReactComponent as Arrow } from '../../assets/icons/arrowup.svg'
  *     If it's an array, it will be rendered as an unordered list.
  */
 export function Collapse({ title, content }) {
-    const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false)
 
-    const arrowClass = isOpen ? 'down' : 'up'
-    const containerClass = isOpen ? 'show' : ''
+  const arrowClass = isOpen ? 'down' : 'up'
+  const containerClass = isOpen ? 'show' : ''
 
-    const handleClick = () => {
-        setIsOpen((v) => !v)
-    }
+  const handleClick = () => {
+    setIsOpen((v) => !v)
+  }
 
-    return (
-        <article className="collapse">
-            <div className="collapse__header">
-                <div className="collapse__header__title">{title}</div>
-                <div
-                    className={`collapse__header__arrow ${arrowClass}`}
-                    onClick={handleClick}
-                >
-                    <Arrow />
-                </div>
-            </div>
-            <div className={`collapse__container ${containerClass}`}>
-                <div className="collapse__content">
-                    {Array.isArray(content) ? (
-                        <ul>
-                            {content.map((item, index) => (
-                                <li key={index}>{item}</li>
-                            ))}
-                        </ul>
-                    ) : (
-                        <p>{content}</p>
-                    )}
-                </div>
-            </div>
-        </article>
-    )
+  return (
+    <article className="collapse">
+      <div className="collapse__header">
+        <div className="collapse__header__title">{title}</div>
+        <div
+          className={`collapse__header__arrow ${arrowClass}`}
+          onClick={handleClick}
+        >
+          <Arrow />
+        </div>
+      </div>
+      <div className={`collapse__container ${containerClass}`}>
+        <div className="collapse__content">
+          {Array.isArray(content) ? (
+            <ul>
+              {content.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          ) : (
+            <p>{content}</p>
+          )}
+        </div>
+      </div>
+    </article>
+  )
 }

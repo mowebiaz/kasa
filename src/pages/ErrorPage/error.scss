@@ -1,0 +1,56 @@
+@import '../../styles/variables', '../../styles/base', '../../styles/normalize';
+
+main.error {
+  gap: 113px;
+  padding-top: 113px;
+  padding-bottom: 113px;
+
+  h1 {
+    font-size: 96px;
+    font-weight: $font-bold;
+    line-height: 96px;
+  }
+  h2 {
+    font-size: $font-size-medium;
+    font-weight: $font-medium;
+    text-align: center;
+    width: 260px;
+    line-height: 142.6%;
+  }
+  a {
+    font-size: 14px;
+    font-weight: $font-medium;
+    text-decoration-line: underline;
+    cursor: pointer;
+  }
+}
+
+/*** Media queries for error page ***/
+@media screen and (min-width: $medium) {
+  main.error {
+    h1 {
+      font-size: 150px;
+      line-height: 150px;
+    }
+    h2 {
+      font-size: 36px;
+      width: auto;
+      margin: 0 100px;
+    }
+    a {
+      font-size: $font-size-medium;
+    }
+  }
+}
+
+@media screen and (min-width: $large) {
+  main.error {
+    gap: 139px;
+    padding-top: 139px;
+    padding-bottom: 139px;
+    h1 {
+      font-size: 288px;
+      line-height: 288px;
+    }
+  }
+}

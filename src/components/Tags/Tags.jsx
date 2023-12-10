@@ -1,3 +1,5 @@
+import './tags.scss'
+
 /**
  * Render a list of tags.
  *
@@ -5,13 +7,13 @@
  * @param {Array} props.tagList - The list of tags to render.
  */
 export function Tags({ tagList }) {
-    return (
-        <ul className="tags">
-            {tagList.map((tag, index) => (
-                <li key={index} className="tags__item">
-                    {tag}
-                </li>
-            ))}
-        </ul>
-    )
+  return (
+    <ul className="tags">
+      {tagList.map((tag, index) => (
+        <li key={index} className="tags__item">
+          {tag}
+        </li>
+      ))}
+    </ul>
+  )
 }

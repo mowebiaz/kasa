@@ -1,3 +1,4 @@
+import './rate.scss'
 import { ReactComponent as Star } from '../../assets/icons/star.svg'
 
 /**
@@ -7,16 +8,16 @@ import { ReactComponent as Star } from '../../assets/icons/star.svg'
  * @param {number} props.value - The rating value.
  */
 export function Rate({ value }) {
-    const stars = []
+  const stars = []
 
-    for (let i = 1; i <= 5; i++) {
-        const starClass = i <= value ? 'star__active' : 'star__inactive'
-        stars.push(
-            <span key={i} className={starClass}>
-                <Star />
-            </span>
-        )
-    }
+  for (let i = 1; i <= 5; i++) {
+    const starClass = i <= value ? 'star__active' : 'star__inactive'
+    stars.push(
+      <span key={i} className={starClass}>
+        <Star />
+      </span>
+    )
+  }
 
-    return <div className="rate">{stars}</div>
+  return <div className="rate">{stars}</div>
 }
