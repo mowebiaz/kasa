@@ -37,9 +37,11 @@ export function Apartment() {
         )
         if (apartmentMatch) {
           setApartmentDetails(apartmentMatch)
+          /* if no match found: id doesn't exist in the list of apartments */
         } else {
           setError(true)
         }
+        /* if error during the HTTP request */
       } catch (err) {
         setError(true)
       } finally {

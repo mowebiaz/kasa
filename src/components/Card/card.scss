@@ -2,7 +2,6 @@
 
 .card {
   width: 100%;
-  max-width: 335px;
   height: 255px;
   position: relative;
   border-radius: 10px;
@@ -10,7 +9,7 @@
 
   :hover {
     cursor: pointer;
-    /*opacity: 0.7; /* à revoir */
+    opacity: 0.7;
   }
 
   &__overlay {
@@ -47,10 +46,16 @@
 }
 
 /*** Media queries for card ***/
+@media screen and (min-width: variables.$medium) {
+  .card {
+    width: calc((100% - 50px) / 2);
+  }
+}
+
 @media screen and (min-width: variables.$large) {
   .card {
+    width: calc((100% - 100px) / 3);
     height: 340px;
-    max-width: 340px;
     img {
       height: 340px;
     }
