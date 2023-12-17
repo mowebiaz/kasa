@@ -13,7 +13,7 @@ export function Rate({ value }) {
   for (let i = 1; i <= 5; i++) {
     const starClass = i <= value ? 'star__active' : 'star__inactive'
     stars.push(
-      <span key={i} className={starClass}>
+      <span key={`star-${i}`} className={starClass}>
         <Star />
       </span>
     )

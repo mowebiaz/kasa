@@ -18,26 +18,26 @@ export function Collapse({ title, content }) {
   const containerClass = isOpen ? 'show' : ''
 
   const handleClick = () => {
-    setIsOpen((v) => !v)
+    setIsOpen((open) => !open)
   }
 
   return (
     <article className="collapse">
       <div className="collapse__header">
         <div className="collapse__header__title">{title}</div>
-        <div
+        <button
           className={`collapse__header__arrow ${arrowClass}`}
           onClick={handleClick}
         >
           <Arrow />
-        </div>
+        </button>
       </div>
       <div className={`collapse__container ${containerClass}`}>
         <div className="collapse__content">
           {Array.isArray(content) ? (
             <ul>
               {content.map((item, index) => (
-                <li key={index}>{item}</li>
+                <li key={`equipements-${index}`}>{item}</li>
               ))}
             </ul>
           ) : (

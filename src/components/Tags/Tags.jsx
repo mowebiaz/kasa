@@ -10,7 +10,7 @@ export function Tags({ tagList }) {
   return (
     <ul className="tags">
       {tagList.map((tag, index) => (
-        <li key={index} className="tags__item">
+        <li key={`tag-${index}`} className="tags__item">
           {tag}
         </li>
       ))}

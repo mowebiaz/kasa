@@ -6,7 +6,7 @@ main.home {
   .gallery {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-flow: wrap;
     gap: 20px;
     p {
@@ -32,6 +32,7 @@ main.home {
     gap: 43px;
     .gallery {
       padding: 56px 50px 43px 50px;
+      gap: 50px;
     }
   }
 }

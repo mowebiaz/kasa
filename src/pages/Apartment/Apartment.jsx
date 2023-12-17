@@ -35,12 +35,11 @@ export function Apartment() {
         const apartmentMatch = result.find(
           (object) => object.id === apartmentId
         )
-        if (apartmentMatch) {
-          setApartmentDetails(apartmentMatch)
-          /* if no match found: id doesn't exist in the list of apartments */
-        } else {
+        /* if no match found: id doesn't exist in the list of apartments */
+        if (!apartmentMatch) {
           setError(true)
         }
+        setApartmentDetails(apartmentMatch)
         /* if error during the HTTP request */
       } catch (err) {
         setError(true)
